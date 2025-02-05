@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Custom Object Table
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Custom Object Table
+    a(href="/update-cobj") Add/Update this table
+    table
+      thead
+        tr
+          th Name
+          th Description
+          th New Date Added
+      tbody
+        // Loop over the projects passed from the route
+        each project in projects
+          tr
+            td= project.properties.name
+            td= project.properties.description
+            td= project.properties.new_date_added
